@@ -1,0 +1,59 @@
+---
+- hosts: all
+  gather_facts: no  
+  roles:
+    - nginx
+
+  tasks:
+    - name: Ensure a list of packages installed
+      become: yes
+      yum: name={{ item }} state=installed
+      with_items:
+        - java-1.8.0-openjdk
+        - git
+
+    - name: Create App Directory
+      become: yes
+      file:
+        path: /opt/app
+        state: directory
+        owner: nginx
+        group: nginx
+
+    - name: Clone Repo
+      become: yes
+      command: "{{ item }} chdir=/opt/app"
+      with_items:
+        - git clone https://github.com/techstage/pagamentos.git
+        - git clone https://github.com/techstage/pagamentos-front.git
+
+    - name: Run Java app in the background
+      become: yes
+      shell: nohup java -jar /opt/app/pagamentos/target/pagamentos*.jar </dev/null >/dev/null 2>&1 &
+
+    - pause:
+        seconds: 15
+
+    - name: REST POST Example 1
+      uri:
+        url: "http://localhost:9030/pagamentos"
+        method: POST  
+        return_content: yes
+        body: "{\"transacao\": 30001, \"valor\": 300.33, \"cliente\": 1, \"nome\": \"Cliente Amex\", \"cartao\": \"312312345678901\"}"
+        body_format: json
+
+    - name: REST POST Example 2
+      uri:
+        url: "http://localhost:9030/pagamentos"
+        method: POST  
+        return_content: yes
+        body: "{\"transacao\": 40001, \"valor\": 400.44, \"cliente\": 1, \"nome\": \"Cliente Visa\", \"cartao\": \"409876543213211\"}"
+        body_format: json
+
+    - name: REST POST Example 3
+      uri:
+        url: "http://localhost:9030/pagamentos"
+        method: POST  
+        return_content: yes
+        body: "{\"transacao\": 50001, \"valor\": 500.55, \"cliente\": 1, \"nome\": \"Cliente Master\", \"cartao\": \"501209876543211\"}"
+        body_format: json

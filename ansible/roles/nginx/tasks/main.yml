@@ -1,0 +1,44 @@
+---
+- name: Install NGINX
+  become: yes
+  command:
+    cmd: amazon-linux-extras install nginx1.12 -y
+
+- name: Create NGINX Conf File
+  become: yes
+  file:
+    path: /etc/nginx/conf.d/web_proxy.conf
+    state: touch
+
+- name: Amend NGINX Conf File
+  become: yes
+  blockinfile:
+      path: /etc/nginx/conf.d/web_proxy.conf
+      marker: ""
+      block: |
+        upstream api {
+        server localhost:9030;
+          }
+        
+          server {
+            listen 80;
+            listen [::]:80;
+
+            server_name demo.techstage.io;
+
+            root /opt/app/pagamentos-front/dist;
+            
+            location /pagamentos {
+                proxy_pass http://api;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto $scheme;
+                proxy_set_header X-Forwarded-Port $server_port;
+            }
+        }
+
+- name: Make Sure NGINX Service Is Running
+  become: yes
+  service:
+    name: nginx
+    state: restarted
+    enabled: yes

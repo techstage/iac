@@ -1,2 +1,1 @@
-# iac
-Infra as Code
+# techstage
