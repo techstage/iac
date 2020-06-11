@@ -39,7 +39,7 @@ iac
 |   |   └───nginx
 |   |       └───tasks
 |   |           └───main.yml
-│   |   techstage-playbook.yml
+│   └───techstage-playbook.yml
 └───terraform
     └───instances.tf
     └───main.tf
