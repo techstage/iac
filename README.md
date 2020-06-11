@@ -3,7 +3,7 @@
 ## Infraestrutura como código utilizando Terraform e Ansible
 
 Nesse repositório você encontra todos os códigos utlizados em nossa primeira live, você pode assistir o vídeo aqui
-<img src="img/youtube.png" width="30">(https://www.youtube.com/watch?v=iLz_hA8YRDo)
+[<img src="img/youtube.png" width="30">](https://www.youtube.com/watch?v=iLz_hA8YRDo)
 
 Diagrama abaixo dos recursos provisionados na AWS.
 
