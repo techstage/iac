@@ -65,4 +65,12 @@ Ou se preferir utlizar como no próprio exemplo
   shared_credentials_file = "~/.aws/credentials"
 }
 ```
-Nesse caso você precisa possuir ou instalar o <a href="https://docs.aws.amazon.com/pt_br/cli/latest/userguide/install-cliv2.html" target="_blank">AWS CLI</a>
+Nesse caso você precisa possuir ou instalar o <a href="https://docs.aws.amazon.com/pt_br/cli/latest/userguide/install-cliv2.html" target="_blank">AWS CLI</a> e após instalado configurá-lo
+
+```
+$ aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]: json
+```
