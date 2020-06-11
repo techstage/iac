@@ -28,4 +28,23 @@ Clone do repositório
 $ git clone https://github.com/techstage/iac.git
 ```
 
-Edite arquivo main.tf você deve configurar sua chave de acesso
+Estrutura do diretório
+```
+iac
+│   README.md
+└───ansible
+│   └───inventory
+│   |   └───hosts.cfg
+│   └───roles
+|   |   └───nginx
+|   |       └───tasks
+|   |           └───main.yml
+│   |   techstage-playbook.yml
+└───terraform
+    └───instances.tf
+    └───main.tf
+    └───outputs.tf
+    └───run-ansible.sh
+    └───templates
+        └───hosts.tpl
+```
