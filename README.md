@@ -1,5 +1,4 @@
-![Techstage](img/techstage.png)
-<img src="img/techstage.png" width="20">
+<img src="img/techstage.png" width="200">
 
 ## Infraestrutura como código utilizando Terraform e Ansible
 
