@@ -5,7 +5,7 @@
 Nesse repositório você encontra todos os códigos utlizados em nossa primeira live, você pode assistir o vídeo aqui
 [<img src="img/youtube.png" width="30">](https://www.youtube.com/watch?v=iLz_hA8YRDo)
 
-Neste exemplo, apresentamos brevemente como provisionar recursos computacionais na AWS através do Terraform e como configurar de forma automática uma instância EC2 com Ansible após sua criação.
+Neste exemplo, apresentamos brevemente como provisionar recursos computacionais na AWS utilizando Terraform e como configurar de forma automática uma instância EC2 com Ansible após sua criação.
 
 Abaixo diagrama abaixo dos recursos provisionados na AWS.
 
