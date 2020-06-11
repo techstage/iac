@@ -17,4 +17,6 @@ Abaixo diagrama abaixo dos recursos provisionados na AWS.
 - Possuir o Terrform e o Ansible em instalado em sua máquina local ou qualauqer outra onde será orquestrado o provsionamento
   - <a href="https://learn.hashicorp.com/terraform/getting-started/install.html" target="_blank">Instalação do Terraform</a>
   - <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html" target="_blank">Instalação do Ansible</a>
-- 
+- Usuário com as devidas roles (permissões) permitindo a criação dos recursos necessários, como boa prática recomenda-se a não utlização do usuário root!
+- Chaves de acesso do usuário para fazer solicitações seguras de protocolo REST ou HTTP query às APIs de serviço da AWS. Para sua proteção, você nunca deve compartilhar suas chaves secretas com ninguém. Como prática recomendada, efetuar a rotação com frequencia das chaves
+- Key Pair para ser attachada à instnância EC2 durante o provisionamento para acesso futuro
