@@ -33,7 +33,7 @@ Estrutura do diretório
 iac
 │   README.md
 └───ansible
-│   └───inventory
+|   └───inventory
 │   |   └───hosts.cfg
 │   └───roles
 |   |   └───nginx
@@ -48,3 +48,21 @@ iac
     └───templates
         └───hosts.tpl
 ```
+
+Editar o arquivo main.tf dentro do diretório terraform e adicionar informações de acesso
+```
+provider "aws" {
+  region     = "us-east-1"
+  access_key = "my-aws-access-key"
+  secret_key = "my-aws-secret-key"
+}
+```
+
+Ou se preferir utlizar como no próprio exemplo
+```
+  provider "aws" {
+  region     = "us-east-1"
+  shared_credentials_file = "~/.aws/credentials"
+}
+```
+Nesse caso você precisa possuir ou instalar o <a href="https://docs.aws.amazon.com/pt_br/cli/latest/userguide/install-cliv2.html" target="_blank">AWS CLI</a>
