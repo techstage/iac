@@ -1,4 +1,6 @@
-![Techstage](img/techstage.png) ## Infraestrutura como código utilizando Terraform e Ansible
+![Techstage](img/techstage.png =250x)
+
+## Infraestrutura como código utilizando Terraform e Ansible
 
 Nesse repositório você encontra os todos códigos utlizado na demontração realizada em YOUTUBE
 
