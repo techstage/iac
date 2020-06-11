@@ -21,6 +21,12 @@ output "nat_public_ips" {
   value       = ["${module.vpc.nat_public_ips}"]
 }
 
+# List of public DNS names assigned to the instances
+output "public_dns" {
+  description = "List of public DNS names assigned to the instances"
+  value       = module.ec2.public_dns[0]
+}
+
 # List instance ID
 output "instance_id" {
   description = "EC2 instance ID"

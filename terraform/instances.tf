@@ -25,11 +25,6 @@ module "ec2" {
   }
 }
 
-resource "aws_eip_association" "eip_assoc" {
-  instance_id   = module.ec2.id[0]
-  allocation_id = "eipalloc-0990e5751a5fb0cc3"
-}
-
 module "security_group" {
   source  = "terraform-aws-modules/security-group/aws"
 
@@ -40,4 +35,14 @@ module "security_group" {
   ingress_cidr_blocks = ["0.0.0.0/0"]
   ingress_rules       = ["ssh-tcp", "http-80-tcp", "all-icmp"]
   egress_rules        = ["all-all"]
+}
+
+# generate inventory file for Ansible
+resource "local_file" "hosts_cfg" {
+  content = templatefile("${path.module}/templates/hosts.tpl",
+    {
+      instances = module.ec2.public_ip
+    }
+  )
+  filename = "../ansible/inventory/hosts.cfg"
 }

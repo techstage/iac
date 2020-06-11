@@ -24,7 +24,7 @@
             listen 80;
             listen [::]:80;
 
-            server_name demo.techstage.io;
+            server_name {{ public_dns }};
 
             root /opt/app/pagamentos-front/dist;
             
