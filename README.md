@@ -1,16 +1,14 @@
-<img src="img/techstage.png" width="100">
+<img src="img/techstage.png" width="100" align="right">
 
-## Infraestrutura como código utilizando Terraform e Ansible
+# Infraestrutura como código utilizando Terraform e Ansible
 
-Nesse repositório você encontra os todos códigos utlizado na demontração realizada em YOUTUBE
-
-
+Nesse repositório você encontra os todos códigos utlizado na demontração realizada no YOUTUBE
 
 Diagrama abaixo dos recursos provisionados na AWS.
 
 ![IaC Workshop Architecture](img/diagram.png)
 
-## Prerequisites
+## Requisitos
 
 Possuir uma conta na AWS
 Possuir o Terrform e o Ansible em instalado em sua máquina ou qualauqer outra de onde será orquestrado o provsionamento
