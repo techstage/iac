@@ -69,8 +69,9 @@ Nesse caso você precisa possuir ou instalar o <a href="https://docs.aws.amazon.
 
 ```
 $ aws configure
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-west-2
+AWS Access Key ID [None]: my-aws-access-key
+AWS Secret Access Key [None]: my-aws-secret-key
+Default region name [None]: us-east-1
 Default output format [None]: json
 ```
+Note que ambas as formas você também pode configuar a região desejada
