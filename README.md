@@ -74,4 +74,20 @@ AWS Secret Access Key [None]: my-aws-secret-key
 Default region name [None]: us-east-1
 Default output format [None]: json
 ```
-Note que ambas as formas você também pode configuar a região desejada
+Note que em ambas as formas você também pode especificar a região desejada
+
+Após as credenciais estarem configuradas iremos iniciar o terraform. De dentro do diretório terraform execute o seguinte comando
+```
+$ terraform init
+```
+
+Uma vez inicializado, podemos executar um plano para verificar se esta tudo certo com os arquivos de configurção e ao mesmo tempo checar todos os recursos que serão aplicados
+```
+$ terraform plan
+```
+
+E por fim aplicar as configurações
+```
+$ terraform apply
+```
+Um pedido de confirmação será solicitado, é só confirmar e aguardar e ao finalizar será exibido uma saída com as informações configuradas no arquivo output.tf
