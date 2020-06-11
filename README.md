@@ -1,4 +1,4 @@
-# Techstage 
+![Techstage](img/techstage.png) 
 
 ## Infraestrutura como código utilizando Terraform e Ansible
 
@@ -8,6 +8,6 @@ Nesse repositório você encontra os todos códigos utlizado na demontração re
 
 Diagrama abaixo dos recursos provisionados na AWS.
 
-![DevOps Workshop Architecture](img/CICD_DevOps_Demo.png)
+![IaC Workshop Architecture](img/diagram.png)
 
 ## Prerequisites
