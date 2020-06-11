@@ -1,4 +1,5 @@
-![Techstage](img/techstage.png) { width: 50px; }
+![Techstage](img/techstage.png)
+<img src="img/techstage.png" width="20">
 
 ## Infraestrutura como código utilizando Terraform e Ansible
 
