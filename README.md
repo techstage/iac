@@ -5,7 +5,9 @@
 Nesse repositório você encontra todos os códigos utlizados em nossa primeira live, você pode assistir o vídeo aqui
 [<img src="img/youtube.png" width="30">](https://www.youtube.com/watch?v=iLz_hA8YRDo)
 
-Diagrama abaixo dos recursos provisionados na AWS.
+Neste exemplo apresentamos como provsionar recursos computacionais na AWS através do Terraform e como configurar de forma automática uma instância EC2 com Ansible após sua criação.
+
+Abaixo diagrama abaixo dos recursos provisionados na AWS.
 
 ![IaC Workshop Architecture](img/diagram.png)
 
