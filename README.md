@@ -19,4 +19,13 @@ Abaixo diagrama abaixo dos recursos provisionados na AWS.
   - <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html" target="_blank">Instalação do Ansible</a>
 - Usuário específico para esse propósito com as devidas permissões (lembre-se, das melhores práticas de segurança, como o de seguir o princípio do menor privilégio e não utilizar a conta root) para criação dos recursos necessários
 - Chaves de acesso do usuário para fazer solicitações seguras de protocolo REST ou HTTP query às APIs de serviço da AWS. Para sua proteção, você nunca deve compartilhar suas chaves secretas com ninguém. Como prática recomendada, efetuar a rotação com frequencia das chaves
-- Key Pair para ser attachada à instnância EC2 durante o provisionamento para acesso futuro
+- Key Pair para ser attachada à instância EC2 durante o provisionamento para acesso futuro
+
+## Hands On
+
+Clone do repositório
+```
+$ git clone https://github.com/techstage/iac.git
+```
+
+Edite arquivo main.tf você deve configurar sua chave de acesso
