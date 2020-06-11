@@ -91,3 +91,9 @@ E por fim aplicar as configurações
 $ terraform apply
 ```
 Um pedido de confirmação será solicitado, é só confirmar e aguardar e ao finalizar será exibido uma saída com as informações configuradas no arquivo output.tf
+
+Com a infra provisionada, agora será necessário configurar a instância EC2 e fazer o deploy das aplicações através de um playbook do ansible
+
+```
+$ ./run-ansible.sh
+```
